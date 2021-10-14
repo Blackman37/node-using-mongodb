@@ -5,7 +5,7 @@ describe('Pulling products', () => {
     it('Add controler to pull a list of items @controller-lists', (done) => {
         try {
             expect(fs.readFileSync('src/controllers/controllers.js').toString())
-            .to.contain("export const getProducts = (req, res) => {")
+                .to.contain("export const getProducts = (req, res) => {")
             expect(fs.readFileSync('src/controllers/controllers.js').toString())
                 .to.contain("Product.find({}, (err, Product) => {")
             done();   
