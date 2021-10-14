@@ -3,7 +3,7 @@ import { ProductSchema } from "../models/models";
 
 const Product = mongoose.model('Product', ProductSchema)
 
-function addnewProduct(req, res) {
+export const addnewProduct = (req, res) => {
     const newProduct = new Product(req.body)
 
     newProduct.save((err, Product) => {
@@ -14,4 +14,4 @@ function addnewProduct(req, res) {
     })
 }
 
-export { addnewProduct }
+// export { addnewProduct }
