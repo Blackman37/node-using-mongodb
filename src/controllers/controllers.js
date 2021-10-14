@@ -14,4 +14,15 @@ export const addnewProduct = (req, res) => {
     })
 }
 
+export const getProducts = (req, res) => {
+    const products = Product.find({}, (err, Product) => {
+        if (err) {
+            res.send(err)
+        }
+        res.json(Product)
+    })
+
+    // const products = Product.find()
+}
+
 // export { addnewProduct }

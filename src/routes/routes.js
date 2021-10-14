@@ -4,7 +4,7 @@ export const routes = (app) => {
     app.route('/products')
 
     // Post endpoint
-        .post(addnewProduct);
+    .post(addnewProduct);
 }
 
 // export { routes }
