@@ -1,9 +1,7 @@
-import { addnewProduct, getProducts, getProductWithID, updateProduct } from '../controllers/controllers'
+import { addnewProduct, getProducts, getProductWithID, updateProduct, deleteProduct } from '../controllers/controllers'
 
 export const routes = (app) => {
     app.route('/products')
-
-        // endpoints
         .get(getProducts)
         .post(addnewProduct);
 
@@ -11,6 +9,8 @@ export const routes = (app) => {
         .get(getProductWithID)
         .put(updateProduct);
 
+    app.route('/products/:Product')
+        .delete(deleteProduct);
 }
 
 // export { routes }
