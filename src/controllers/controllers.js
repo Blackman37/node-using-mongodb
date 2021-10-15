@@ -31,3 +31,14 @@ export const getProductWithID = (req, res) => {
         res.json(Product)
     })
 }
+
+export const updateProduct = (req, res) => {
+    // const newProduct = new Product(req.body)
+
+    Product.findOneAndUpdate({ _id: req.params.ProductID }, req.body, { new: true, useFindAndModify: false }, (err, Product) => {
+        if (err) {
+            res.send(err)
+        }
+        res.json(Product)
+    })
+}
